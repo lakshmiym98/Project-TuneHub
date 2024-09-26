@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<title>PLAYLIST</title>
+   <link rel="stylesheet" type="text/css" href="createplaylists.css">
+
+</head>
+<body>
+	<h1>TuneHub</h1>
+	<form action="addplaylist" method="post">
+		<label>Playlist Name:</label> 
+		<input type="text" name="name" placeholder="Enter playlist name">
+		
+		<div th:each="song:${songs}">
+			<br>
+			<input type="checkbox" th:name="songs" th:value="${song.id}">
+			<label th:text="${song.name}"></label>
+		</div>
+		
+		<br>
+		<input type="submit" value="ADD PLAYLIST">
+	</form>
+
+</body>
+</html>

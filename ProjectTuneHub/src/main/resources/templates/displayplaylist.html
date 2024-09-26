@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Playlists</title>
+    <link rel="stylesheet" type="text/css" href="displayplaylist.css">
+
+</head>
+<body>
+		<h1>TuneHub</h1>
+
+	<table border="1">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="all:${allplaylist}">
+				<td th:text="${all.id}"></td>
+				<td th:text="${all.name}"></td>
+				<td>
+					<ul>
+						<li th:each="song:${all.songs}">
+							<span th:text="${song.name}"></span>
+			
+							<audio controls>
+								<source th:src="${song.link}">
+							</audio>
+							
+						</li>	
+					</ul>
+				</td>
+				
+				</tr>
+			</tbody>
+	</table>
+
+</body>
+</html>

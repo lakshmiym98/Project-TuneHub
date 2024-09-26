@@ -1,0 +1,38 @@
+/* Style for the body */
+body {
+	text-align:center;
+    font-family: Arial, sans-serif;
+    background-color:pink;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the heading */
+h3 {
+    color: #333;
+}
+
+/* Style for the forms */
+form {
+    margin: 10px;    
+}
+
+/* Style for the submit buttons */
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Add some spacing between elements */
+br {
+    margin-top: 10px;
+}
+h1 {
+	background-color:gold;
+    color: green; 
+    text-align: center;
+}
